@@ -8,7 +8,7 @@ platform :android do
     firebase_app_distribution(
     app: "1:448036056319:android:5de0af02e170f598f0f0ca",
     testers: "yousseframadan573@gmail.com, hr@recogenie.com",
-    firebase_cli_token: ENV["FIREBASE_TOKEN"],
+    firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
     android_artifact_type: "APK",
     android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
     upload_timeout: 2600,
