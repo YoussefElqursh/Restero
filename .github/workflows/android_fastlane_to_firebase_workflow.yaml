@@ -2,7 +2,7 @@ name: Android Fastlane to Firebase Workflow
 on:
     push:
         branches:
-            - main
+            - master
 jobs:
   push_firebase_app_distribution:
     runs-on: ubuntu-latest
