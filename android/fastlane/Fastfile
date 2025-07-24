@@ -1,0 +1,18 @@
+default_platform(:android)
+
+platform :android do
+  desc "First lane for firebase distribution for JustOrder app"
+  lane :push_firebase_app_distribution do
+    sh "flutter clean"
+    sh "flutter build apk --release --no-tree-shake-icons"
+    firebase_app_distribution(
+    app: "1:448036056319:android:5de0af02e170f598f0f0ca",
+    testers: "yousseframadan573@gmail.com, hr@recogenie.com",
+    firebase_cli_token: "1//033zVfvWE2KMuCgYIARAAGAMSNwF-L9IrVa43WbT0gCOsNiPN_XQHSMfWSP5QL0jAIpor641tmC8vFxQAJ0iZ5JsTU2LfrbnFV3Q",
+    android_artifact_type: "APK",
+    android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
+    upload_timeout: 2600,
+    release_notes: "release 1.0.1 for testing"
+  )
+  end
+end

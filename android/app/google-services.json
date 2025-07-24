@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "448036056319",
+    "project_id": "restero-1e1b0",
+    "storage_bucket": "restero-1e1b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448036056319:android:5de0af02e170f598f0f0ca",
+        "android_client_info": {
+          "package_name": "com.Reco_Genie.restero"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmDVIipgqtBBS5d7PkRO2oUG9Y5yYN7VM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
