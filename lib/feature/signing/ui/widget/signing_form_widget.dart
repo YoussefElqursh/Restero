@@ -57,14 +57,6 @@ class _SigningFormWidgetState extends State<SigningFormWidget> {
           key: _formKey,
           child: Column(
             children: [
-              Text(
-                'OR',
-                style: GoogleFonts.inter(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              SizedBox(height: 20.h),
               CommonTextFieldWidget(
                 controller: widget.emailController,
                 keyboardType: TextInputType.emailAddress,
