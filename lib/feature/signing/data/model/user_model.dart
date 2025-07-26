@@ -1,11 +1,20 @@
+// lib/models/user_model.dart
 class UserModel {
+  final String uid;
   final String name;
   final String email;
-  final String password;
 
   UserModel({
+    required this.uid,
     required this.name,
     required this.email,
-    required this.password,
   });
+
+  factory UserModel.fromMap(Map<String, dynamic> data, String uid) {
+    return UserModel(
+      uid: uid,
+      name: data['name'] ?? '',
+      email: data['email'] ?? '',
+    );
+  }
 }

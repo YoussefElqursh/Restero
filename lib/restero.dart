@@ -7,6 +7,7 @@ import 'package:restero/feature/cart/logic/cart_cubit.dart';
 import 'package:restero/feature/home/ui/screen/home_layout.dart';
 import 'package:restero/feature/signing/ui/screen/signing_screen.dart';
 
+import 'feature/signing/logic/signing_cubit.dart';
 import 'feature/splash/ui/screen/splash_screen.dart';
 
 class Restero extends StatelessWidget {
@@ -16,17 +17,20 @@ class Restero extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => CartCubit(),
-      child: ScreenUtilInit(
-        designSize: const Size(430, 932),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (_, child) {
-          return MaterialApp.router(
-            routerConfig: _router,
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(fontFamily: GoogleFonts.inter().fontFamily),
-          );
-        },
+      child: BlocProvider(
+        create: (context) => AuthCubit(),
+        child: ScreenUtilInit(
+          designSize: const Size(430, 932),
+          minTextAdapt: true,
+          splitScreenMode: true,
+          builder: (_, child) {
+            return MaterialApp.router(
+              routerConfig: _router,
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(fontFamily: GoogleFonts.inter().fontFamily),
+            );
+          },
+        ),
       ),
     );
   }
